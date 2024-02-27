@@ -1,0 +1,211 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SneakerHeads</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+
+  <body>
+    {% comment %}NAVBAR{% endcomment %}
+    <nav class="navbar navbar-expand-lg bg-white">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">SneakerHeads</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav1" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+        <div class="collapse navbar-collapse" id="navbarNav1">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="d-none d-lg-block">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link fs-5" href="#" id="searchIcon"><i class="bi bi-search"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5" href="#"><i class="bi bi-heart"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5" href="#"><i class="bi bi-cart3"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5" href="#"><i class="bi bi-arrow-return-left"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5" href="#"><i class="bi bi-person"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    {% comment %}CAROUSEL{% endcomment %}
+    <div class="container px-md-5 mt-3">
+      <div id="carouselExampleDark" class="carousel px-md-5" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="{% static 'images/carousel/1 new balance.jpg' %}" class="d-block w-100" alt="Slide 1" />
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+          <div class="carousel-item" data-bs-interval="10000">
+            <img src="{% static 'images/carousel/2 Boots.jpg' %}" class="d-block w-100" alt="Slide 2" />
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+          <div class="carousel-item" data-bs-interval="10000">
+            <img src="{% static 'images/carousel/3 Sneakers & Athletic Shoes.jpg' %}" class="d-block w-100" alt="Slide 3" />
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% comment %}GRID{% endcomment %}
+    <div class="container mt-4 px-md-5">
+      <div class="row px-md-5">
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <img src="{% static 'images/grid/1 formals.jpg' %}" class="img-fluid" alt="" />
+            </div>
+            <div class="col-md-6 mb-4">
+              <img src="{% static 'images/grid/2 womens midsoles.jpg' %}" class="img-fluid" alt="" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 pb-4">
+              <img src="{% static 'images/grid/3 running shoes.jpg' %}" class="img-fluid" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="row">
+            <div class="col-md-12">
+              <img src="{% static 'images/grid/4 athletic shoes.jpg' %}" class="img-fluid" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% comment %}NEW ARRIVALS{% endcomment %}
+    <div class="container mt-5">
+      <div class="row px-5">
+        <div class="col-lg-3 col-md-6 col-6 p-3">
+          <div class="card">
+            <img src="{% static 'images/new_arrivals/1_new_balance_547.jpg' %}" class="card-img-top product-img" alt="Placeholder Image" />
+            <div class="card-body">
+              <h5 class="card-title">Product 1</h5>
+              <p class="card-text">$XX.XX</p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-6 p-3">
+          <div class="card">
+            <img src="{% static 'images/new_arrivals/2_adidas_cadicase_running_shoes.webp' %}" class="card-img-top product-img" alt="Placeholder Image" />
+            <div class="card-body">
+              <h5 class="card-title">Product 2</h5>
+              <p class="card-text">$XX.XX</p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-6 p-3">
+          <div class="card">
+            <img src="{% static 'images/new_arrivals/3_under_armour_charged_pursuit_3_running_shoes.jpg' %}" class="card-img-top product-img" alt="Placeholder Image" />
+            <div class="card-body">
+              <h5 class="card-title">Product 3</h5>
+              <p class="card-text">$XX.XX</p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-6 p-3">
+          <div class="card">
+            <img src="{% static 'images/new_arrivals/4_nike_revolution_6_running_shoe.webp' %}" class="card-img-top product-img" alt="Placeholder Image" />
+            <div class="card-body">
+              <h5 class="card-title">Product 4</h5>
+              <p class="card-text">$XX.XX</p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% comment %}CATEGORIES CONTAINER{% endcomment %}
+    <div class="container my-5 px-5">
+      <div class="row px-5">
+        <div class="col-12">
+          <div class="row">
+            <div class="col-4">
+              <div class="row">
+                <img src="{% static 'images/categories/1 women shoe category.jpg' %}" alt="" />
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="row">
+                <img src="{% static 'images/categories/2 mens shoes.jpg' %}" alt="" />
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="row">
+                <img src="{% static 'images/categories/3 kids shoe category.jpg' %}" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-5 px-5">
+        <div class="row">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-4">
+                <div class="row">
+                  <img src="{% static 'images/highlights/1 new balance.jpg' %}" alt="" />
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="row">
+                  <img src="{% static 'images/highlights/2 socks.jpg' %}" alt="" />
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="row">
+                  <img src="{% static 'images/highlights/3 limited edition.jpeg' %}" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
